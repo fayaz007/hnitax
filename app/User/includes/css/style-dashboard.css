@@ -1,0 +1,109 @@
+.Done-status{
+    background-color: #05fa3ffd;
+}
+
+.In-Progress-status{
+    background-color: #f7c53c;
+}
+.Pending-status{
+    background-color: #eb0606f6;
+}
+.Hold-status{
+    background-color: #4ea0ff;
+}
+
+.Overdue-status{
+     background-color: #eb0606f6;
+}
+
+.add-button {
+    background-color: #622963;
+    color: #fff !important;
+}
+
+.Low-status{
+   color: #00a2f9 !important;
+
+}
+
+.High-status{
+    color: #eb0606f6 !important;
+
+}
+
+
+
+
+
+
+.ui-datepicker {
+    z-index: 9999 !important;
+}
+
+.select2-container {
+
+    width: 100% !important;
+}
+
+.select2-container .select2-selection--single {
+    height: auto;
+
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px;
+
+}
+
+.Done-dashboard{
+    background-color: #05fa3ffd !important;
+/*    color:#fff;*/
+}
+.In-Progress-dashboard{
+    background-color: #f7c53c !important;
+/*      color:#fff;*/
+}
+.Pending-dashboard{
+    background-color: #eb0606f6 !important;
+/*      color:#fff;*/
+}
+.Hold-dashboard{
+    background-color: #4ea0ff !important;
+/*      color:#fff;*/
+}
+
+
+
+ /* Apply styles for printing */
+    @media print {
+
+        /* Hide certain elements that are not needed on printed pages */
+        .no-print {
+            display: none;
+        }
+
+        /* Set page margins and padding */
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+
+       
+
+        /* Use background properties to force background colors to be printed */
+        #Done-dashboard {
+            background: #05fa3ffd !important;
+        }
+
+        #In-Progress-dashboard {
+            background: #f7c53c !important;
+        }
+
+        #Pending-dashboard {
+            background: #eb0606f6 !important;
+        }
+
+        #Hold-dashboard {
+            background: #4ea0ff !important;
+        }
+    }

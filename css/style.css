@@ -1,0 +1,239 @@
+.hero-image {
+  position: relative;
+  text-align: center;
+}
+
+.main-hero-img {
+  max-width: 100%;
+  position: relative;
+  border-radius: 10px; /* Optional: To round the edges of the image */
+}
+
+.floating-icon {
+  position: absolute;
+  animation: moveIcons 8s ease-in-out infinite; /* Smooth movement for icons */
+  transition: transform 0.3s ease-in-out;
+  width: 70px; /* Slightly larger icons for visibility */
+}
+
+.icon-tax {
+  top: 12%;
+  left: 18%;
+}
+
+.icon-money {
+  top: 35%;
+  left: 40%;
+}
+
+.icon-document {
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Icon Movement Animation */
+@keyframes moveIcons {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(25px, -10px);
+  }
+  50% {
+    transform: translate(0, 25px);
+  }
+  75% {
+    transform: translate(-25px, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Vendor Prefixes for Older Browsers */
+@-webkit-keyframes fadeInText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+}
+
+.animated-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f9921e;
+  animation: fadeInText 4s ease-in-out infinite;
+  -webkit-animation: fadeInText 4s ease-in-out infinite;
+}
+
+.btn-signin {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: var(--white-color);
+  background: var(--accent-color);
+  text-transform: capitalize;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* WhatsApp Floating Chat Button with Pulse Effect */
+.btn-whatsapp-pulse {
+  background: #25d366; /* WhatsApp green color */
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Adjust width */
+  height: 60px; /* Adjust height */
+  padding: 15px; /* Padding for better fit */
+  text-decoration: none;
+  border-radius: 50%;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
+  z-index: 9999; /* Make sure the button stays on top of other elements */
+}
+
+/* Pulse animation for the WhatsApp button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+/* WhatsApp button for larger screens */
+@media (min-width: 768px) {
+  .btn-whatsapp-pulse {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    font-size: 30px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* WhatsApp button for mobile screens */
+@media (max-width: 767px) {
+  .btn-whatsapp-pulse {
+    width: 50px; /* Smaller button on mobile */
+    height: 50px; /* Smaller height */
+    padding: 12px; /* Adjust padding */
+    font-size: 25px; /* Adjust font size */
+    bottom: 15px; /* Slightly adjust the position for mobile */
+    right: 15px; /* Slightly adjust the position for mobile */
+  }
+}
+
+/* WhatsApp button for extra small screens */
+@media (max-width: 480px) {
+  .btn-whatsapp-pulse {
+    width: 45px; /* Even smaller button for very small screens */
+    height: 45px; /* Smaller height */
+    padding: 10px; /* Adjust padding */
+    font-size: 20px; /* Smaller font size */
+    bottom: 10px; /* Adjust button position */
+    right: 10px; /* Adjust button position */
+  }
+}
+
+/* Optional: Adjusting the border effect size for mobile */
+.btn-whatsapp-pulse-border {
+  bottom: 120px;
+  right: 20px;
+  animation-play-state: paused;
+}
+
+.btn-whatsapp-pulse-border::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  padding: 25px;
+  border: 5px solid #25d366;
+  opacity: 0.75;
+  animation-name: pulse-border;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+/* Pulse border animation */
+@keyframes pulse-border {
+  0% {
+    padding: 25px;
+    opacity: 0.75;
+  }
+  75% {
+    padding: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* new css  */
+.center-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Adjust as needed for the desired spacing */
+  margin: 0 auto; /* Ensures centering in case of text alignment issues */
+}
+
+.icon-box img {
+  display: block; /* Ensures the image is treated as a block element */
+}
+
+.active_1 {
+  font-weight: bold;
+  color: #f9921e !important;
+}
+
+.submenu.active_1 > a {
+  color: #f9921e !important;
+}
+
+.active_service{
+  background-color: #f9921e !important;
+  color: #fff !important;
+}
+
